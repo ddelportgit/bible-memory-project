@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css");
+
+/* ── Reset ── */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background-color: #0a0a0f;
+  color: #e8e8f0;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Inter Tight", sans-serif;
+}
+
+/* ── CSS Variables ── */
+
+:root {
+  --theme: #c0c8d8;
+  --bg: #0a0a0f;
+  --bg-surface: #12121a;
+  --bg-card: #1a1a26;
+  --bg-card-hover: #1e1e2e;
+  --border: #2a2a3a;
+  --border-subtle: #1e1e2c;
+  --text: #e8e8f0;
+  --text-muted: #6b6b80;
+  --text-subtle: #4a4a60;
+  --glow: transparent;
+}
+
+/* ── Light Mode ── */
+
+body.light {
+  --bg: #f4f4f0;
+  --bg-surface: #ffffff;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f8f8fc;
+  --border: #e0e0da;
+  --border-subtle: #ebebea;
+  --text: #1a1a1a;
+  --text-muted: #555555;
+  --text-subtle: #777777;
+  --glow: transparent;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* ── Scrollbar ── */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

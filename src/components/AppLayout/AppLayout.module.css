@@ -1,0 +1,263 @@
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* ── Navbar ── */
+
+.navbar {
+  height: 60px;
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  gap: 16px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.logo {
+  font-family: "Inter Tight", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.3px;
+}
+
+.logo span {
+  color: var(--theme);
+}
+
+.sidebarToggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--text-muted);
+  font-size: 16px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: color 0.15s ease;
+}
+
+.sidebarToggle:hover {
+  color: var(--text);
+}
+
+/* ── Main Layout ── */
+
+.mainLayout {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ── Backdrop ── */
+
+.backdrop {
+  display: none;
+}
+
+/* ── Sidebar ── */
+
+.sidebar {
+  width: 240px;
+  background-color: var(--bg-surface);
+  border-right: 1px solid var(--border);
+  padding: 20px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-shrink: 0;
+  transition:
+    width 0.25s ease,
+    padding 0.25s ease;
+  overflow: hidden;
+}
+
+.sidebarClosed {
+  width: 0;
+  padding: 0;
+  border-right: none;
+}
+
+.navMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 216px;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: 0.9rem;
+  font-family: "DM Sans", sans-serif;
+  transition: all 0.15s ease;
+  background-color: transparent;
+  color: var(--text-muted);
+  width: 100%;
+  white-space: nowrap;
+}
+
+.navLink:hover {
+  background-color: var(--bg-card);
+  color: var(--text);
+}
+
+.activeNavLink {
+  background-color: var(--bg-card);
+  color: var(--theme);
+  font-weight: 500;
+}
+
+.activeNavLink:hover {
+  color: var(--theme);
+}
+
+/* ── Sidebar Footer ── */
+
+.sidebarFooter {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  width: 216px;
+}
+
+.themeRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+}
+
+.themeDot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  padding: 0;
+  cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    border-color 0.15s ease;
+  flex-shrink: 0;
+}
+
+.themeDot:hover {
+  transform: scale(1.2);
+}
+
+.themeDotActive {
+  border-color: var(--text);
+  transform: scale(1.2);
+}
+
+.darkModeRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-family: "DM Sans", sans-serif;
+  color: var(--text-muted);
+  transition: all 0.15s ease;
+  text-align: left;
+}
+
+.darkModeRow:hover {
+  background-color: var(--bg-card);
+  color: var(--text);
+}
+
+.signOutBtn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-family: "DM Sans", sans-serif;
+  color: var(--text-muted);
+  transition: all 0.15s ease;
+  text-align: left;
+}
+
+.signOutBtn:hover {
+  background: rgba(239, 68, 68, 0.08);
+  color: #ef4444;
+}
+
+/* ── Content Area ── */
+
+.contentArea {
+  flex: 1;
+  padding: 32px;
+  background-color: var(--bg);
+  overflow-y: auto;
+}
+
+/* ── Mobile ── */
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 16px;
+  }
+
+  .contentArea {
+    padding: 16px;
+  }
+
+  .sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 240px;
+    z-index: 40;
+    transform: translateX(-100%);
+    transition: transform 0.25s ease;
+    padding: 20px 12px;
+    border-right: 1px solid var(--border);
+    overflow: visible;
+  }
+
+  .sidebarOpen {
+    transform: translateX(0);
+  }
+
+  .sidebarClosed {
+    width: 240px;
+    padding: 20px 12px;
+    border-right: 1px solid var(--border);
+  }
+
+  .backdrop {
+    display: block;
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 39;
+    backdrop-filter: blur(2px);
+  }
+}

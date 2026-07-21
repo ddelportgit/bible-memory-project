@@ -1,0 +1,41 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  backdrop-filter: blur(6px);
+}
+
+.bubble {
+  background: var(--bg-card);
+  border-radius: 8px;
+  padding: 1.75rem;
+  max-width: 380px;
+  width: 90%;
+  position: relative;
+  border: 1px solid var(--border);
+}
+
+.verseNum {
+  font-size: 10px;
+  color: var(--theme);
+  margin: 0 0 10px 0;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: "DM Sans", sans-serif;
+}
+
+.text {
+  font-size: 15px;
+  line-height: 1.9;
+  margin: 0;
+  color: var(--text);
+  font-family: "DM Sans", sans-serif;
+}

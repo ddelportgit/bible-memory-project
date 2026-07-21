@@ -1,0 +1,264 @@
+.page {
+  min-height: 100vh;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Banner ── */
+
+.banner {
+  background: color-mix(in srgb, var(--theme) 15%, var(--bg-surface));
+  border-bottom: 1px solid var(--border);
+  padding: 10px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  font-family: "DM Sans", sans-serif;
+  color: var(--text-muted);
+  gap: 1rem;
+}
+
+.banner i {
+  margin-right: 8px;
+  color: var(--theme);
+}
+
+.bannerActions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.signInBtn {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 5px 14px;
+  font-size: 12px;
+  font-family: "DM Sans", sans-serif;
+  cursor: pointer;
+  color: var(--text-muted);
+  transition: all 0.15s ease;
+}
+
+.signInBtn:hover {
+  border-color: var(--theme);
+  color: var(--theme);
+}
+
+.signUpBtn {
+  background: var(--theme);
+  border: none;
+  border-radius: 6px;
+  padding: 5px 14px;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: "DM Sans", sans-serif;
+  cursor: pointer;
+  color: var(--bg);
+  transition: all 0.15s ease;
+}
+
+.signUpBtn:hover {
+  filter: brightness(1.1);
+}
+
+/* ── Logo ── */
+
+.logo {
+  font-family: "Inter Tight", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  padding: 16px 24px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.logo span {
+  color: var(--theme);
+}
+
+/* ── Container ── */
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 3rem;
+  width: 100%;
+}
+
+/* ── Controls ── */
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+  background: var(--bg-card);
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.controls select {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-family: "DM Sans", sans-serif;
+  background: var(--bg-surface);
+  outline: none;
+  cursor: pointer;
+  color: var(--text);
+  flex: 1;
+  min-width: 120px;
+  transition: border-color 0.15s ease;
+}
+
+.controls select:hover {
+  border-color: var(--theme);
+}
+.controls select:focus {
+  border-color: var(--theme);
+  box-shadow: 0 0 0 3px var(--glow);
+}
+.controls select:disabled {
+  color: var(--text-muted);
+  cursor: default;
+}
+.controls option {
+  background: var(--bg-card);
+  color: var(--text);
+}
+
+.loadBtn {
+  background: var(--theme);
+  border: none;
+  border-radius: 8px;
+  padding: 8px 20px;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: "DM Sans", sans-serif;
+  cursor: pointer;
+  color: var(--bg);
+  white-space: nowrap;
+  transition: all 0.15s ease;
+}
+
+.loadBtn:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 0 16px var(--glow);
+}
+
+.loadBtn:disabled {
+  background: var(--border);
+  color: var(--text-muted);
+  cursor: default;
+  box-shadow: none;
+}
+
+/* ── Chunk Label ── */
+
+.chunkLabel {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-family: "DM Sans", sans-serif;
+}
+
+/* ── Error ── */
+
+.errorBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(239, 68, 68, 0.05);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.errorBox i {
+  font-size: 24px;
+  color: #ef4444;
+}
+
+.errorBox p {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-family: "DM Sans", sans-serif;
+}
+
+.retryBtn {
+  background: transparent;
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  border-radius: 8px;
+  padding: 6px 16px;
+  font-size: 12px;
+  font-family: "DM Sans", sans-serif;
+  cursor: pointer;
+  color: #ef4444;
+  transition: all 0.15s ease;
+}
+
+.retryBtn:hover {
+  background: rgba(239, 68, 68, 0.1);
+}
+
+@media (max-width: 768px) {
+  .banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 10px 16px;
+  }
+
+  .bannerActions {
+    width: 100%;
+  }
+
+  .signInBtn,
+  .signUpBtn {
+    flex: 1;
+  }
+
+  .bannerActions {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .logo {
+    padding: 12px 16px;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+    padding: 0.75rem;
+  }
+
+  .controls select {
+    width: 100%;
+    flex: none;
+  }
+
+  .loadBtn {
+    width: 100%;
+  }
+}

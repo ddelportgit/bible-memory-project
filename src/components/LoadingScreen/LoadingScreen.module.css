@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: var(--bg);
+}
+
+.text {
+  font-size: 14px;
+  color: var(--text-muted);
+  font-family: "DM Sans", sans-serif;
+}
