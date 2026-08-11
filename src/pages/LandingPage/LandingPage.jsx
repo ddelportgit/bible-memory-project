@@ -30,7 +30,7 @@ export default function LandingPage() {
       {/* Navbar */}
       <header className={styles.navbar}>
         <div className={styles.logo}>
-          Scripture<span>App</span>
+          Bible<span>Memory</span>
         </div>
         <div className={styles.navActions}>
           <button className={styles.signInBtn} onClick={() => navigate("/sign-in")}>
@@ -71,9 +71,6 @@ export default function LandingPage() {
         <div className={styles.featuresInner}>
           {features.map((f) => (
             <div key={f.title} className={styles.featureCard}>
-              <div className={styles.featureIcon}>
-                <i className={f.icon}></i>
-              </div>
               <h3 className={styles.featureTitle}>{f.title}</h3>
               <p className={styles.featureDesc}>{f.description}</p>
             </div>
@@ -98,7 +95,7 @@ export default function LandingPage() {
       {/* Footer */}
       <footer className={styles.footer}>
         <span className={styles.logo}>
-          Scripture<span>App</span>
+          Bible<span>Memory</span>
         </span>
         <p className={styles.footerText}>Built to help you hide His word in your heart.</p>
       </footer>

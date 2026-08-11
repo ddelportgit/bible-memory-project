@@ -57,7 +57,7 @@ export default function GuestMemoryGrid() {
       {/* Guest Banner */}
       <div className={styles.banner}>
         <span>
-          <i className="fa-solid fa-eye"></i> You're in guest mode — progress is not saved.
+          <i className="fa-solid fa-eye"></i> You're in guest mode, progress is not saved.
         </span>
         <div className={styles.bannerActions}>
           <button className={styles.signInBtn} onClick={() => navigate("/sign-in")}>
@@ -71,7 +71,7 @@ export default function GuestMemoryGrid() {
 
       {/* Logo */}
       <div className={styles.logo} onClick={() => navigate("/")}>
-        Scripture<span>App</span>
+        Bible<span>Memory</span>
       </div>
 
       <div className={styles.container}>

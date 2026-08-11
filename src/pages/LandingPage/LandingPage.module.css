@@ -194,19 +194,6 @@
   border-color: var(--theme);
 }
 
-.featureIcon {
-  width: 40px;
-  height: 40px;
-  border-radius: 8px;
-  background: color-mix(in srgb, var(--theme) 15%, var(--bg-card));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--theme);
-  font-size: 16px;
-  border: 1px solid var(--border);
-}
-
 .featureTitle {
   font-size: 15px;
   font-weight: 700;

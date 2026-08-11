@@ -32,7 +32,7 @@ export default function AppLayout({
           <i className={`fa-solid fa-${sidebarOpen ? "bars" : "bars"}`}></i>
         </button>
         <div className={styles.logo}>
-          Scripture<span>App</span>
+          Bible<span>Memory</span>
         </div>
       </header>
 

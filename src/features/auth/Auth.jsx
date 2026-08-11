@@ -31,7 +31,7 @@ export default function Auth() {
     <div className={styles.container}>
       <div className={styles.card}>
         <div className={styles.logo}>
-          Scripture<span>App</span>
+          Bible<span>Memory</span>
         </div>
         <h1 className={styles.title}>{isSignUp ? "Create an account" : "Welcome back"}</h1>
         <p className={styles.subtitle}>
